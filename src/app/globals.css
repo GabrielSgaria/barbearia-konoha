@@ -67,3 +67,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.swiper-pagination-bullet {
+  background: hsl(262 59% 34%) !important;
+  display: none !important
+}

@@ -4,11 +4,12 @@ import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Scissors, Droplet, Sparkles, Star, MapPin, Phone, Mail, Clock, ChevronRight, Sun, Moon } from "lucide-react"
+import { Scissors, Droplet, Sparkles, MapPin, Phone, Mail, Clock, ChevronRight, Sun, Moon } from "lucide-react"
 import { useTheme } from "next-themes"
 import { motion, useScroll } from "framer-motion"
 import Image from "next/image"
 import PhotoGallery from "@/components/photo-gallery"
+import TestimonialSlider from "@/components/testimonial-slider"
 
 export default function HomePage() {
   const { theme, setTheme } = useTheme()
@@ -132,7 +133,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Siga-nos no Instagram</h2>
           <div className="flex flex-col items-center md:flex-row justify-center md:gap-2 lg:gap-10">
-             <iframe
+            <iframe
               src="https://www.instagram.com/p/C-IY-OApBwv/embed"
               width="320"
               height="550"
@@ -156,40 +157,19 @@ export default function HomePage() {
 
       {/* Testimonials Section */}
       <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">O Que Nossos Clientes Dizem</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { name: "Naruto U.", text: "O melhor corte da vila! Sempre saio daqui pronto para ser Hokage." },
-              { name: "Sasuke U.", text: "Atendimento impecável e ambiente acolhedor. Recomendo!" },
-              { name: "Kakashi H.", text: "Profissionais habilidosos que sabem lidar até com os cabelos mais rebeldes." },
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card>
-                  <CardHeader>
-                    <CardTitle>{testimonial.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{testimonial.text}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <div className="flex text-yellow-500">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-                    </div>
-                  </CardFooter>
-                </Card>
-              </motion.div>
-            ))}
+        <motion.section
+          id="testimonials"
+          className="py-16 bg-background"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center">O Que Nossos Clientes Dizem</h2>
+            <TestimonialSlider />
           </div>
-        </div>
+        </motion.section>
       </section>
 
       {/* Locations Section */}
