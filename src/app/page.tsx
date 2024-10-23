@@ -188,7 +188,7 @@ export default function HomePage() {
                     <CardTitle className="text-primary">{location.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="flex items-center mb-2"><MapPin className="w-4 h-4 mr-2" /> {location.address}</p>
+                    <p className="flex items-start sm:items-center mb-2"><MapPin className="w-4 h-4 mr-2 mt-1 sm:mt-0" /> {location.address}</p>
                     <p className="flex items-center mb-2"><Phone className="w-4 h-4 mr-2" /> {location.phone}</p>
                     <Link className="flex items-center text-primary font-bold" href={location.link} target='_blank'><CornerUpRight className="w-4 h-4 mr-2" /> Obter Rota!</Link>
                   </CardContent>
