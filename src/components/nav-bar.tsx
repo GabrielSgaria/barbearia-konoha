@@ -30,7 +30,7 @@ export default function NavBar() {
               height={600}
               alt='Logo Icon'
               src="/images/logo.jpeg"
-              className='h-12 sm:h-20 w-full'
+              className='h-12 sm:h-20 w-full max-w-[179px] md:max-w-[299px]'
             />
           </Link>
           <div className="hidden md:flex space-x-4 items-center">

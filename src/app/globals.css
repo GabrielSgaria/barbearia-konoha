@@ -72,3 +72,9 @@ body {
   background: hsl(262 59% 34%) !important;
   display: none !important
 }
+.swiper-button-next {
+  color: hsl(262 59% 34%) !important;
+}
+.swiper-button-prev {
+  color: hsl(262 59% 34%) !important;
+}
