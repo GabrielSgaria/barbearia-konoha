@@ -21,6 +21,7 @@ export default function PhotoGallery() {
   return (
     <motion.section
       className="py-16 bg-background"
+      id='gallery'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

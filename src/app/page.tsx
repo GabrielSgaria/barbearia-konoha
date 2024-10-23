@@ -1,39 +1,23 @@
 "use client"
 
-import * as React from "react"
+import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Scissors, Droplet, Sparkles, MapPin, Phone, Mail, Clock, ChevronRight, Sun, Moon } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Scissors, Droplet, Sparkles, MapPin, Phone, Mail, Clock, ChevronRight, CornerUpRight } from "lucide-react"
 import { motion, useScroll } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import PhotoGallery from "@/components/photo-gallery"
 import TestimonialSlider from "@/components/testimonial-slider"
+import NavBar from '@/components/nav-bar'
 
 export default function HomePage() {
-  const { theme, setTheme } = useTheme()
   const { scrollYProgress } = useScroll()
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Theme Toggle */}
-      <motion.div
-        className="fixed top-4 right-4 z-50"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        >
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </motion.div>
+      <NavBar />
 
       {/* Progress Bar */}
       <motion.div
@@ -42,44 +26,50 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-black text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col-reverse gap-20 md:flex-row items-center justify-between">
-            <motion.div
-              className="text-center md:text-left md:ml-8"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Barbearia Konoha</h1>
-              <p className="text-xl mb-6">Estilo e precisão para o seu visual ninja</p>
-              <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Contato
-                </Button>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Localização
-                </Button>
-              </div>
-            </motion.div>
-            <motion.div
-              className="mb-8 md:mb-0 w-full sm:w-[700px] h-32"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Image
-                quality={100}
-                priority
-                sizes="(min-width: 1080px) 50vw, 100vw"
-                fill
-                src="/images/logo.jpeg"
-                alt="Barbearia Konoha Logo"
-                className="object-cover"
-              />
-            </motion.div>
+      <section className="min-h-screen bg-corte-banner text-white bg-cover bg-top">
+        <div className='bg-black/80 backdrop-blur-sm flex items-center min-h-screen relative '>
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col-reverse gap-20 md:flex-row items-center justify-between">
+              <motion.div
+                className="text-center md:text-left md:ml-8"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">Barbearia Konoha</h1>
+                <p className="text-xl mb-6">Estilo e precisão para o seu visual ninja</p>
+                <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
+                      <Phone className="w-4 h-4 mr-2" />
+                      Contato
+                    </Link>
+                  </Button>
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white">
+                    <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
+                      <Scissors className="w-4 h-4 mr-2" />
+                      Assinar Plano
+                    </Link>
+                  </Button>
+                </div>
+              </motion.div>
+              <motion.div
+                className="mb-8 md:mb-0 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Image
+                  quality={100}
+                  priority
+                  sizes="(min-width: 1080px) 50vw, 100vw"
+                  fill
+                  src="/images/icon-logo.png"
+                  alt="Barbearia Konoha Logo"
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -178,8 +168,8 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Nossas Unidades</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: "Unidade Centro", address: "R. Vinte e Cinco de Agosto, 231 - loja 4 - Centro, Pinhais - PR.", phone: "(11) 1234-5678" },
-              { name: "Unidade Zona Sul", address: "R. Juscelino Kubitscheck, 285 - Jardim Amélia, Pinhais - PR.", phone: "(11) 9876-5432" },
+              { name: "Unidade Centro de Pinhais", address: "R. Vinte e Cinco de Agosto, 231 - loja 4 - Centro, Pinhais - PR.", phone: "(41) 99826-1769", link: "https://maps.app.goo.gl/YPs5m4UMeYznwxbr7" },
+              { name: "Unidade Jardim Amélia", address: "R. Juscelino Kubitscheck, 285 - Jardim Amélia, Pinhais - PR.", phone: "(41) 99850-1051", link: "https://maps.app.goo.gl/wJpL1DkcY7iuxL5b6" },
             ].map((location, index) => (
               <motion.div
                 key={index}
@@ -194,7 +184,8 @@ export default function HomePage() {
                   </CardHeader>
                   <CardContent>
                     <p className="flex items-center mb-2"><MapPin className="w-4 h-4 mr-2" /> {location.address}</p>
-                    <p className="flex items-center"><Phone className="w-4 h-4 mr-2" /> {location.phone}</p>
+                    <p className="flex items-center mb-2"><Phone className="w-4 h-4 mr-2" /> {location.phone}</p>
+                    <Link className="flex items-center text-primary font-bold" href={location.link}><CornerUpRight className="w-4 h-4 mr-2" /> Obter Rota!</Link>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -209,9 +200,9 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Nossos Planos</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Básico", price: "R$ 50", features: ["1 corte por mês", "10% de desconto em produtos"] },
-              { title: "Ninja", price: "R$ 100", features: ["2 cortes por mês", "1 barba por mês", "20% de desconto em produtos"] },
-              { title: "Hokage", price: "R$ 150", features: ["Cortes ilimitados", "Barbas ilimitadas", "30% de desconto em produtos"] },
+              { title: "Corte", price: "R$ 89,90", features: ["Corte Ilimitado no mês.", "10% de desconto em produtos.", "10% de desconto em outros serviços."] },
+              { title: "Barba", price: "R$ 99,90", features: ["Barba Ilimitadas no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
+              { title: "Corte e Barba", price: "R$ 159,90", features: ["Corte ilimitados no mês.", "Barba ilimitada no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
             ].map((plan, index) => (
               <motion.div
                 key={index}
@@ -229,6 +220,7 @@ export default function HomePage() {
                     <ul className="space-y-2">
                       {plan.features.map((feature, i) => (
                         <li key={i} className="flex items-center">
+
                           <ChevronRight className="w-4 h-4 mr-2 text-primary" />
                           {feature}
                         </li>
@@ -237,9 +229,9 @@ export default function HomePage() {
                   </CardContent>
                   <CardFooter>
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-                      <a href="https://cashbarber.com.br/barbeariakonoha" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://linktr.ee/barbeariakonoha" target="_blank" rel="noopener noreferrer">
                         Assinar Plano
-                      </a>
+                      </Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -265,16 +257,16 @@ export default function HomePage() {
             whileTap={{ scale: 0.95 }}
           >
             <Button className="bg-background text-foreground hover:bg-background/90" size="lg" asChild>
-              <a href="https://cashbarber.com.br/barbeariakonoha" target="_blank" rel="noopener noreferrer">
+              <Link href="https://linktr.ee/barbeariakonoha" target="_blank" rel="noopener noreferrer">
                 Agendar Horário
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </div>
       </motion.section>
 
       {/* Footer */}
-      <footer className="py-12 bg-muted">
+      <footer className="py-12 bg-muted" id='contact'>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
@@ -348,6 +340,7 @@ function ServicesSection() {
   return (
     <motion.section
       className="py-16 bg-muted"
+      id='services'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -382,8 +375,10 @@ function ServicesSection() {
                       <CardContent className="p-6">
                         <h3 className="text-lg font-semibold mb-2 text-primary">{service}</h3>
                         <p className="text-sm text-muted-foreground mb-4">Serviço profissional de alta qualidade.</p>
-                        <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                          Agendar
+                        <Button asChild variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                          <Link href="https://linktr.ee/barbeariakonoha" target="_blank">
+                            Agendar
+                          </Link>
                         </Button>
                       </CardContent>
                     </Card>
@@ -397,4 +392,3 @@ function ServicesSection() {
     </motion.section>
   )
 }
-

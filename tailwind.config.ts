@@ -19,6 +19,9 @@ const config: Config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "corte-banner": "url(/images/background/corte.jpg)"
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
