@@ -16,7 +16,7 @@ export default function HomePage() {
   const { scrollYProgress } = useScroll()
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <NavBar />
 
       {/* Progress Bar */}
@@ -26,7 +26,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
-      <section className="min-h-screen bg-corte-banner text-white bg-cover bg-top">
+      <section className="min-h-screen bg-corte-banner text-white bg-cover bg-top overflow-x-hidden">
         <div className='bg-black/80 backdrop-blur-sm flex items-center min-h-screen relative '>
           <div className="container mx-auto px-4">
             <div className="flex flex-col-reverse gap-5 md:flex-row items-center justify-between">
@@ -82,13 +82,13 @@ export default function HomePage() {
 
       {/* About Section */}
       <motion.section
-        className="py-16"
+        className="py-16 overflow-x-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 ">
           <div className="flex flex-col md:flex-row items-center">
             <motion.div
               className="md:w-1/2 mb-8 md:mb-0"
@@ -121,7 +121,7 @@ export default function HomePage() {
       </motion.section>
 
       {/* Instagram Embed Section */}
-      <section className="py-16 bg-muted">
+      <section className="py-16 bg-muted overflow-x-hidden">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Siga-nos no Instagram</h2>
           <div className="flex flex-col gap-5 items-center md:flex-row justify-center md:gap-2 lg:gap-10">
@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background overflow-x-hidden">
         <motion.section
           id="testimonials"
           className="py-16 bg-background"
@@ -168,7 +168,7 @@ export default function HomePage() {
       </section>
 
       {/* Locations Section */}
-      <section className="py-16 bg-muted">
+      <section className="py-16 bg-muted overflow-x-hidden" >
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Nossas Unidades</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

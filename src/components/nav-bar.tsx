@@ -21,7 +21,7 @@ export default function NavBar() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black shadow-md ">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-3 sm:py-1">
           <Link href="/" className="text-2xl font-bold text-white">
