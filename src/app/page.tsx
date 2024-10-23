@@ -185,7 +185,7 @@ export default function HomePage() {
                   <CardContent>
                     <p className="flex items-center mb-2"><MapPin className="w-4 h-4 mr-2" /> {location.address}</p>
                     <p className="flex items-center mb-2"><Phone className="w-4 h-4 mr-2" /> {location.phone}</p>
-                    <Link className="flex items-center text-primary font-bold" href={location.link}><CornerUpRight className="w-4 h-4 mr-2" /> Obter Rota!</Link>
+                    <Link className="flex items-center text-primary font-bold" href={location.link} target='_blank'><CornerUpRight className="w-4 h-4 mr-2" /> Obter Rota!</Link>
                   </CardContent>
                 </Card>
               </motion.div>

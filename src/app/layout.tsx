@@ -17,6 +17,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Barbearia Konoha - Estilo e Tradição",
+  metadataBase: new URL("https://www.barbeariakonoha.com"),
+  icons: '/favicon.png',
   description:
     "A Barbearia Konoha oferece serviços de corte de cabelo, barba e estética masculina com excelência e tradição. Agende seu horário online e desfrute de uma experiência personalizada.",
   keywords: [
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     "barbeiro profissional",
     "barbearia em pinhais",
     "barbeiro pinhais"
-    
+
   ],
   openGraph: {
     title: "Barbearia Konoha - Estilo e Tradição",
@@ -50,8 +52,6 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    site: "@barbeariakonoha",
     title: "Barbearia Konoha - Estilo e Tradição",
     description:
       "Descubra a Barbearia Konoha, especializada em cortes e barbas de alta qualidade. Reserve seu horário agora!",
@@ -73,7 +73,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
-        <NavBar/>
+        <NavBar />
         <ThemeProvider attribute="class" defaultTheme="white">
           {children}
         </ThemeProvider>
