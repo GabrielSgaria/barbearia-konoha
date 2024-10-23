@@ -42,11 +42,10 @@ export const metadata: Metadata = {
     siteName: "Barbearia Konoha",
     images: [
       {
-        url: "https://opengraph.b-cdn.net/production/images/d1ff32cb-818c-427b-948d-e9b8d9a5b4ab.png?token=iJbMskV8xtAOxm0FMBlsE4ci_qBAjAq6S-OEVSb6zgw&height=1200&width=1200&expires=33265645087",
-        width: 800,
-        height: 600,
-        alt: "Barbearia Konoha - Interior da loja",
-      },
+        url: '../../public/images/logo2.png',
+        width: 500,
+        height: 500,
+      }
     ],
     locale: "pt_BR",
     type: "website",
@@ -55,7 +54,9 @@ export const metadata: Metadata = {
     title: "Barbearia Konoha - Estilo e Tradição",
     description:
       "Descubra a Barbearia Konoha, especializada em cortes e barbas de alta qualidade. Reserve seu horário agora!",
-    images: "https://opengraph.b-cdn.net/production/images/d1ff32cb-818c-427b-948d-e9b8d9a5b4ab.png?token=iJbMskV8xtAOxm0FMBlsE4ci_qBAjAq6S-OEVSb6zgw&height=1200&width=1200&expires=33265645087",
+    images: {
+     url: "https://opengraph.b-cdn.net/production/images/d1ff32cb-818c-427b-948d-e9b8d9a5b4ab.png?token=iJbMskV8xtAOxm0FMBlsE4ci_qBAjAq6S-OEVSb6zgw&height=1200&width=1200&expires=33265645087",
+    }
   },
   robots: {
     index: true,
