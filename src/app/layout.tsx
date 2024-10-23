@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Barbearia Konoha",
     images: [
       {
-        url: '../../public/images/logo2.png',
+        url: 'https://opengraph.b-cdn.net/production/images/d1ff32cb-818c-427b-948d-e9b8d9a5b4ab.png?token=iJbMskV8xtAOxm0FMBlsE4ci_qBAjAq6S-OEVSb6zgw&height=1200&width=1200&expires=33265645087',
         width: 500,
         height: 500,
       }
