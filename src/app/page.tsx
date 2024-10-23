@@ -37,18 +37,19 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Barbearia Konoha</h1>
-                <p className="text-xl mb-6">Estilo e precisão para o seu visual ninja</p>
-                <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 shadow-md">
+                {/* <p className="text-xl mb-2">Um lugar pra você!</p> */}
+                <p className="text-xl mb-6"><span className='font-bold '>Barbearia por assinatura</span>, seu visual sempre em dia por um preço fixo!</p>
+                <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
+                    <Link href="https://linktr.ee/barbeariakonoha" target='_blank' className='flex items-center'>
                       <Phone className="w-4 h-4 mr-2" />
                       Contato
                     </Link>
                   </Button>
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white shadow-md">
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white">
                     <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
                       <Scissors className="w-4 h-4 mr-2" />
-                      Assinar Plano
+                      Assinar Plano Ilimitado
                     </Link>
                   </Button>
                 </div>
@@ -108,7 +109,7 @@ export default function HomePage() {
             >
               <h2 className="text-3xl font-bold mb-4">Sobre a Barbearia Konoha</h2>
               <p className="text-muted-foreground mb-4">
-                Fundada com a paixão pela arte da barbearia, a Barbearia Konoha traz o espírito dos ninjas para o mundo dos cortes masculinos. Nossa equipe de barbeiros altamente treinados está pronta para proporcionar uma experiência única de cuidado pessoal.
+                A Barbearia Konoha busca entregar uma experiência diferente aos clientes, prezamos por um atendimento de excelência, ambiente agradável e profissionais de alta performance, treinados e qualificados para realizar qualquer serviço disponível, aqui você é prioridade.
               </p>
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-md">
                 <Link href="https://www.instagram.com/barbearia.konoha/" target='_blank'>
@@ -286,11 +287,11 @@ export default function HomePage() {
                 <li className="flex items-center"><Mail className="w-4 h-4 mr-2" />barbeariakonoha1@gmail.com</li>
               </ul>
             </div>
-            <div> 
+            <div>
               <h4 className="text-lg font-semibold mb-4">Horário de Funcionamento</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Seg - Sex: 9:20 às 20:40</li>
-                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Sáb: 9:20 às 17:00</li>
+                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Seg - Sex: 9:20 às 20:00</li>
+                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Sáb: 9:20 às 17:20</li>
                 <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Dom: Fechado</li>
               </ul>
             </div>

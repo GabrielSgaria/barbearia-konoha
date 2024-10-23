@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, Moon, Sun, X } from 'lucide-react'
+import { Menu, Moon, Scissors, Sun, X } from 'lucide-react'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Button } from './ui/button'
@@ -25,7 +25,7 @@ export default function NavBar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-3 sm:py-1">
           <Link href="/" className="text-2xl font-bold text-white">
-            <Image 
+            <Image
               width={600}
               height={600}
               alt='Logo Icon'
@@ -43,6 +43,12 @@ export default function NavBar() {
                 {item.name}
               </Link>
             ))}
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white">
+              <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
+                <Scissors className="w-4 h-4 mr-2" />
+                Assinar Plano Ilimitado
+              </Link>
+            </Button>
             <Button
               variant="ghost"
               size="icon"
@@ -93,6 +99,12 @@ export default function NavBar() {
                   {item.name}
                 </Link>
               ))}
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white mt-6">
+                <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
+                  <Scissors className="w-4 h-4 mr-2" />
+                  Assinar Plano Ilimitado
+                </Link>
+              </Button>
             </div>
           </motion.div>
         )}
