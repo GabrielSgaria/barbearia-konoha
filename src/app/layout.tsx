@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Barbearia Konoha - Estilo e Tradição",
-  metadataBase: new URL("https://www.barbeariakonoha.com"),
+  metadataBase: new URL("https://www.barbeariakonoha.com.br"),
   icons: '/favicon.png',
   description:
     "A Barbearia Konoha oferece serviços de corte de cabelo, barba e estética masculina com excelência e tradição. Agende seu horário online e desfrute de uma experiência personalizada.",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Barbearia Konoha - Estilo e Tradição",
     description:
       "Venha conhecer a Barbearia Konoha e aproveite nossos serviços de alta qualidade em cortes, barbas e estética masculina.",
-    url: "https://www.barbeariakonoha.com",
+    url: "https://www.barbeariakonoha.com.br",
     siteName: "Barbearia Konoha",
     images: [
       {
