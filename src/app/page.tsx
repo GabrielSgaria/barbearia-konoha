@@ -282,7 +282,7 @@ export default function HomePage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />(41) 99826-1769 - Pinhais.</li>
+                <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />(41) 99826-1769 - Centro.</li>
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />(41) 99850-1051 - Vila Amélia.</li>
                 <li className="flex items-center"><Mail className="w-4 h-4 mr-2" />barbeariakonoha1@gmail.com</li>
               </ul>
