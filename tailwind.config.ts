@@ -20,7 +20,7 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        "corte-banner": "url(/images/background/corte.jpg)"
+        "corte-banner": "url(/images/background/1.jpg)"
       },
       colors: {
         border: 'hsl(var(--border))',

@@ -98,7 +98,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Image width={500} height={500} src="/images/loja2.png" alt="Barbearia Konoha" className="rounded-lg shadow-lg" />
+              <Image width={1000} height={1000} quality={100} priority src="/images/store/6.jpg" alt="Barbearia Konoha" className="rounded-lg shadow-lg w-[550px] h-[450px] sm:w-[90%] object-cover" />
             </motion.div>
             <motion.div
               className="md:w-1/2 md:pl-8"
@@ -130,21 +130,18 @@ export default function HomePage() {
               src="https://www.instagram.com/p/C-IY-OApBwv/embed"
               width="320"
               height="550"
-              allowTransparency={true}
               className='rounded-xl shadow-md'
             ></iframe>
             <iframe
               src="https://www.instagram.com/p/CU3GdpBP3wP/embed"
               width="320"
               height="550"
-              allowTransparency={true}
               className='rounded-xl shadow-md'
             ></iframe>
             <iframe
               src="https://www.instagram.com/p/CWvTxNZLQS_/embed"
               width="320"
               height="550"
-              allowTransparency={true}
               className='rounded-xl shadow-md'
             ></iframe>
           </div>
