@@ -203,9 +203,9 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Nossos Planos</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Corte", price: "R$ 89,90", features: ["Corte Ilimitado no mês.", "10% de desconto em produtos.", "10% de desconto em outros serviços."] },
-              { title: "Barba", price: "R$ 99,90", features: ["Barba Ilimitadas no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
-              { title: "Corte e Barba", price: "R$ 159,90", features: ["Corte ilimitados no mês.", "Barba ilimitada no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
+              { title: "Corte", price: "R$ 129,90", features: ["Corte Ilimitado no mês.", "10% de desconto em produtos.", "10% de desconto em outros serviços."] },
+              { title: "Barba", price: "R$ 149,90", features: ["Barba Ilimitadas no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
+              { title: "Corte e Barba", price: "R$ 199,90", features: ["Corte ilimitados no mês.", "Barba ilimitada no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
             ].map((plan, index) => (
               <motion.div
                 key={index}
