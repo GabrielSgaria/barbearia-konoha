@@ -172,7 +172,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { name: "Unidade Centro de Pinhais", address: "R. Vinte e Cinco de Agosto, 231 - loja 4 - Centro, Pinhais - PR.", phone: "(41) 99826-1769", link: "https://maps.app.goo.gl/YPs5m4UMeYznwxbr7" },
-              { name: "Unidade Jardim Amélia", address: "R. Juscelino Kubitscheck, 285 - Jardim Amélia, Pinhais - PR.", phone: "(41) 99850-1051", link: "https://maps.app.goo.gl/wJpL1DkcY7iuxL5b6" },
+              // { name: "Unidade Jardim Amélia", address: "R. Juscelino Kubitscheck, 285 - Jardim Amélia, Pinhais - PR.", phone: "(41) 99850-1051", link: "https://maps.app.goo.gl/wJpL1DkcY7iuxL5b6" },
             ].map((location, index) => (
               <motion.div
                 key={index}
@@ -280,15 +280,15 @@ export default function HomePage() {
               <h4 className="text-lg font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />(41) 99826-1769 - Centro.</li>
-                <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />(41) 99850-1051 - Vila Amélia.</li>
+                {/* <li className="flex items-center"><Phone className="w-4 h-4 mr-2" />(41) 99850-1051 - Vila Amélia.</li> */}
                 <li className="flex items-center"><Mail className="w-4 h-4 mr-2" />barbeariakonoha1@gmail.com</li>
               </ul>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Horário de Funcionamento</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Seg - Sex: 9:20 às 20:00</li>
-                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Sáb: 9:20 às 17:20</li>
+                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Seg - Sex: 9:00 às 20:00</li>
+                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Sáb: 9:00 às 18:00</li>
                 <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Dom: Fechado</li>
               </ul>
             </div>
