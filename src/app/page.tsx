@@ -55,7 +55,7 @@ export default function HomePage() {
                 </div>
               </motion.div>
               <motion.div
-                className="mb-8 md:mb-0 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px]"
+                className="mb-8 md:mb-0 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] relative"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -67,7 +67,7 @@ export default function HomePage() {
                   fill
                   src="/images/icon-logo.png"
                   alt="Barbearia Konoha Logo"
-                  className="object-cover"
+                  className="object-cover absolute"
                 />
               </motion.div>
             </div>
