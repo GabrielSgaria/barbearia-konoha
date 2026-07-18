@@ -171,7 +171,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Nossas Unidades</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: "Unidade Centro de Pinhais", address: "R. Vinte e Cinco de Agosto, 231 - loja 4 - Centro, Pinhais - PR.", phone: "(41) 99826-1769", link: "https://maps.app.goo.gl/YPs5m4UMeYznwxbr7" },
+              { name: "Unidade Centro de Pinhais", address: "R. Vinte e Cinco de Agosto, 231 - loja 1 - Centro, Pinhais - PR.", phone: "(41) 99826-1769", link: "https://maps.app.goo.gl/YPs5m4UMeYznwxbr7" },
               // { name: "Unidade Jardim Amélia", address: "R. Juscelino Kubitscheck, 285 - Jardim Amélia, Pinhais - PR.", phone: "(41) 99850-1051", link: "https://maps.app.goo.gl/wJpL1DkcY7iuxL5b6" },
             ].map((location, index) => (
               <motion.div
@@ -203,9 +203,9 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Nossos Planos</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Corte", price: "R$ 129,90", features: ["Corte Ilimitado no mês.", "10% de desconto em produtos.", "10% de desconto em outros serviços."] },
-              { title: "Barba", price: "R$ 149,90", features: ["Barba Ilimitadas no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
-              { title: "Corte e Barba", price: "R$ 199,90", features: ["Corte ilimitados no mês.", "Barba ilimitada no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
+              { title: "Corte", price: "R$ 149,90", features: ["Corte Ilimitado no mês.", "10% de desconto em produtos.", "10% de desconto em outros serviços."] },
+              { title: "Barba", price: "R$ 199,90", features: ["Barba Ilimitadas no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
+              { title: "Corte e Barba", price: "R$ 249,90", features: ["Corte ilimitados no mês.", "Barba ilimitada no mês.", "10% de desconto em produtos", "10% de desconto em outros serviços."] },
             ].map((plan, index) => (
               <motion.div
                 key={index}
@@ -214,7 +214,7 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card>
+                <Card className="w-full min-h-90 h-full flex flex-col justify-between">
                   <CardHeader>
                     <CardTitle className="text-2xl font-bold">{plan.title}</CardTitle>
                     <CardDescription className="text-3xl font-bold text-primary">{plan.price}/mês</CardDescription>
@@ -230,7 +230,7 @@ export default function HomePage() {
                       ))}
                     </ul>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="mt-auto">
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-md " asChild>
                       <Link href="https://linktr.ee/barbeariakonoha" target="_blank" rel="noopener noreferrer">
                         Assinar Plano
@@ -288,7 +288,7 @@ export default function HomePage() {
               <h4 className="text-lg font-semibold mb-4">Horário de Funcionamento</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Seg - Sex: 9:00 às 20:00</li>
-                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Sáb: 9:00 às 18:00</li>
+                <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Sáb: 8:00 às 17:00</li>
                 <li className="flex items-center"><Clock className="w-4 h-4 mr-2" /> Dom: Fechado</li>
               </ul>
             </div>
@@ -305,7 +305,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center">
-            <p>&copy; 2024 Barbearia Konoha. Todos os direitos reservados.</p>
+            <p>&copy; <span suppressHydrationWarning>{new Date().getFullYear()}</span> Barbearia Konoha. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

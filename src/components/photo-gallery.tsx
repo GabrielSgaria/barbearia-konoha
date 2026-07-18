@@ -14,8 +14,6 @@ export default function PhotoGallery() {
     "/images/jobs/job1.jpg",
     "/images/jobs/job2.jpg",
     "/images/jobs/job3.jpg",
-    // "/images/jobs/job4.jpg",
-    // "/images/jobs/job5.jpg",
     "/images/jobs/job4.jpg",
     "/images/jobs/job5.jpg",
     "/images/jobs/job6.jpg",
@@ -23,10 +21,6 @@ export default function PhotoGallery() {
     "/images/jobs/job8.jpg",
     "/images/jobs/job9.jpg",
     "/images/jobs/job10.jpg",
-    "/images/jobs/job11.jpg",
-    "/images/jobs/job12.jpg",
-    "/images/jobs/job13.jpg",
-    "/images/jobs/job14.jpg",
   ]
 
   return (
