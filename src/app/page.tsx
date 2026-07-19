@@ -15,6 +15,20 @@ import NavBar from '@/components/nav-bar'
 export default function HomePage() {
   const { scrollYProgress } = useScroll()
 
+  function getInstagramEmbedUrl(url: string): string | undefined {
+    const match = url.match(
+      /^https?:\/\/(?:www\.)?instagram\.com\/(?:[^/]+\/)?(p|reel|tv)\/([^/?#]+)/
+    );
+
+    if (!match) {
+      return undefined;
+    }
+
+    const [, type, shortcode] = match;
+
+    return `https://www.instagram.com/${type}/${shortcode}/embed`;
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <NavBar />
@@ -121,25 +135,25 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* Instagram Embed Section */}
+       {/* Instagram Embed Section */}
       <section className="py-16 bg-muted overflow-x-hidden">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Siga-nos no Instagram</h2>
           <div className="flex flex-col gap-5 items-center md:flex-row justify-center md:gap-2 lg:gap-10">
             <iframe
-              src="https://www.instagram.com/p/C-IY-OApBwv/embed"
+              src={getInstagramEmbedUrl("https://www.instagram.com/barbearia.konoha/reel/DXFZQUJEQYB/")}
               width="320"
               height="550"
               className='rounded-xl shadow-md'
             ></iframe>
             <iframe
-              src="https://www.instagram.com/p/CU3GdpBP3wP/embed"
+              src={getInstagramEmbedUrl("https://www.instagram.com/rolezandocuritiba/reel/DKLEqUbRXs_/")}
               width="320"
               height="550"
               className='rounded-xl shadow-md'
             ></iframe>
             <iframe
-              src="https://www.instagram.com/p/CWvTxNZLQS_/embed"
+              src={getInstagramEmbedUrl("https://www.instagram.com/konopkavictorr/reel/Da5r12DO0K3/")}
               width="320"
               height="550"
               className='rounded-xl shadow-md'
