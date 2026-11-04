@@ -42,13 +42,13 @@ export default function HomePage() {
                 <p className="text-xl mb-6"><span className='font-bold '>Barbearia por assinatura</span>, seu visual sempre em dia por um preço fixo!</p>
                 <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    <Link href="https://https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento.ee/barbeariakonoha" target='_blank' className='flex items-center'>
+                    <Link href="https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento" target='_blank' className='flex items-center'>
                       <Phone className="w-4 h-4 mr-2" />
                       Contato
                     </Link>
                   </Button>
                   <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white">
-                    <Link href="https://https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento.ee/barbeariakonoha" className='flex items-center'>
+                    <Link href="https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento" className='flex items-center'>
                       <Scissors className="w-4 h-4 mr-2" />
                       Assinar Plano Ilimitado
                     </Link>
@@ -209,7 +209,7 @@ export default function HomePage() {
                   </CardContent>
                   <CardFooter className="mt-auto">
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-md " asChild>
-                      <Link href="https://https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento.ee/barbeariakonoha" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento" target="_blank" rel="noopener noreferrer">
                         Assinar Plano
                       </Link>
                     </Button>
@@ -237,7 +237,7 @@ export default function HomePage() {
             whileTap={{ scale: 0.95 }}
           >
             <Button className="bg-background text-foreground hover:bg-background/90 shadow-md" size="lg" asChild>
-              <Link href="https://https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento.ee/barbeariakonoha" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento" target="_blank" rel="noopener noreferrer">
                 Agendar Horário
               </Link>
             </Button>
@@ -357,7 +357,7 @@ function ServicesSection() {
                         <h3 className="text-lg font-semibold mb-2 text-primary">{service}</h3>
                         <p className="text-sm text-muted-foreground mb-4">Serviço profissional de alta qualidade.</p>
                         <Button asChild variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-md">
-                          <Link href="https://https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento.ee/barbeariakonoha" target="_blank">
+                          <Link href="https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento" target="_blank">
                             Agendar
                           </Link>
                         </Button>
