@@ -44,7 +44,7 @@ export default function NavBar() {
               </Link>
             ))}
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white">
-              <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
+              <Link href="https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento" className='flex items-center'>
                 <Scissors className="w-4 h-4 mr-2" />
                 Assinar Plano Ilimitado
               </Link>
@@ -100,7 +100,7 @@ export default function NavBar() {
                 </Link>
               ))}
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-white mt-6">
-                <Link href="https://linktr.ee/barbeariakonoha" className='flex items-center'>
+                <Link href="https://wa.me/5541998261769?text=Ol%C3%A1!%20Vim%20do%20site%20e%20gostaria%20de%20fazer%20um%20agendamento" className='flex items-center'>
                   <Scissors className="w-4 h-4 mr-2" />
                   Assinar Plano Ilimitado
                 </Link>
